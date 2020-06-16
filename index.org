@@ -1,0 +1,58 @@
+#+title: Payment for Order Flow
+#+author: Matt Brigida, Ph.D.
+#+STARTUP: hideblocks
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+LATEX_HEADER: \usepackage[citestyle=authoryear-icomp,bibstyle=authoryear, hyperref=true,backref=true,maxcitenames=3,url=true,backend=bibtex]{biblatex}
+#+LATEX_HEADER: \addbibresource{references.bib}
+
+
+[[https://www.youtube.com/watch?v=1sOqYRdnP_g][The Only Game in Town]] illustrated how the financial industry profits from liquidity and noise traders, and loses to informed traders.  Since the amount of liquidity trading is fixed, the industry attempts to increase the number of noise traders. Noise traders are those who think they are informed, but are really not. The more a noise traders trades, the more they are guaranteed to lose to the market maker through the bid/ask spread.  This discussion treats the financial industry as a whole, but here we'll look at the issue from the perspective of an individual institution.
+
+* Payment for Order Flow
+
+Now take a particular point in time, and the amount of noise trading is fixed.  How can our individual financial institution increase their share of noise trading, without also increasing their exposure to informed traders?  Our institution can't simple make markets in more stocks or offer tighter spreads, which will increase market share of both noise and informed.  We need some way to specifically target noise traders.
+
+The first observation to make is that small retail traders are nearly all (if not completely) noise traders.  If we wait for these traders' orders to reach the exchange, we can only estimate who is a small retail trader---informed traders will actively try to disguise themselves as these noise traders.
+
+So we need to get the small retail traders order flow /before/ is reaches the exchange.  This is where /Payment for Order Flow/ comes in.  Say a particular brokerage firm, call it Millennial Inc, has customers who are primarily small retail traders who are new to financial markets.  We pay Millennial $100 million per year for Millennial to send their customers orders to our firm, where we can wither fill those orders or, if not, send them along to organized exchanges.
+
+We cannot give the customers of Millennial /worse/ fill prices than what is available in the exchanges, but the key to understand is we don't need to. Spreads are increasing in the proportion of informed trading.  So if the order flow we have bought has fewer informed traders, we can meet or beat the spreads offered in the market and be /more/ profitable because we are not losing to the informed.  
+
+So a rough calculation may look like this, if Millennial has $500 billion in order flow per year, and the average spread is 0.01%, then our firm expects to earn $500 billion times 0.01% which is $500 million per year.  After paying Millennial we have an expected profit of $400 million.
+
+* Is All Order Flow Worth The Same?
+
+Say GenX is a brokerage catering to mid-career professionals who are primarily liquidity traders.  Conversely, Millennial caters to younger early-career clients who are primarily active noise traders.  Would you pay the same amount per unit of order flow (say per trade)?
+
+No, you would pay more for the GenX order flow than Millennial.  The idea is GenX is safer---the order flow is less affected by the state of the economy.  Millennial order flow will increase if the stock market increases, and will decrease sharply if there is a crash.  So you should play less for this order flow, which will give you a higher expected return.
+
+Note, the market maker earns an equal amount from the liquidity trader as from the noise trader.  The riskiness of the noise trader order flow comes from its correlation with the economy.  You can say noise trader order flow has a higher $\beta$ and therefore a higher expected return.
+
+* The Broad Effect on Financial Markets
+
+The concern is that if much of the profitable noise trader order flow never makes it to the National Market System (organized exchanges) then there will be a larger proportion of informed traders in these markets.  Market makers will thus increase spreads, driving out all but the informed traders.  Once the market is dominated by the informed, it fails.
+
+The systemic effect of payment for order flow is a concern for policymakers and regulators---not shareholder-value-maximizing market participants. Academic research on the topic, like most research, has provided mixed results.  If you are interested in reading the academic literature on the topic, I would recommend you start with [[https://scholar.google.com/scholar?cluster=5963764566755566857&hl=en&as_sdt=0,33][Easley, Kiefer and O'Hara (1996)]].
+
+* Recent Cases Involving Payment for Order Flow 
+
+[[https://www.bloomberg.com/news/articles/2019-12-19/robinhood-fined-1-25-million-over-how-it-routed-customer-orders][Robinhood was fined $1.25 million in 2019 because it didn't ensure the best price for its customers.]]  [[https://www.finra.org/media-center/newsreleases/2019/finra-fines-robinhood-financial-llc-125-million-best-execution][Here is the FINRA announcement.]]  Robinhood apparently [[https://www.bloomberg.com/news/articles/2018-10-15/robinhood-gets-almost-half-its-revenue-in-controversial-bargain-with-high-speed-traders][gets much of its revenue from payment for order flow]], and may have received substantially more per order than other brokerages.
+
+* [[https://en.wikipedia.org/wiki/Flesch%25E2%2580%2593Kincaid_readability_tests][Reading Ease Score]]
+
+#+BEGIN_SRC elisp :results output :exports results
+(print (writegood-reading-ease))
+#+END_SRC
+
+#+RESULTS:
+: 
+: "Flesch-Kincaid reading ease score: 73.36 Fairly easy (7th grade)"
+
+#+BEGIN_SRC elisp :results output :exports results
+(print (writegood-grade-level))
+#+END_SRC
+
+#+RESULTS:
+: 
+: "Flesch-Kincaid grade level score: 6.65"
+
