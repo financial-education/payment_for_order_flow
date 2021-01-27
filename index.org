@@ -1,7 +1,7 @@
 #+title: Payment for Order Flow
 #+author: Matt Brigida, Ph.D.
 #+STARTUP: hideblocks
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 #+LATEX_HEADER: \usepackage[citestyle=authoryear-icomp,bibstyle=authoryear, hyperref=true,backref=true,maxcitenames=3,url=true,backend=bibtex]{biblatex}
 #+LATEX_HEADER: \addbibresource{references.bib}
 
